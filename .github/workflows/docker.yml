@@ -29,4 +29,4 @@ jobs:
           context: ./my_flask_app
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/flask_app:v0.3
+          tags: ${{ secrets.DOCKER_USERNAME }}/flask_app:v0.3.1
