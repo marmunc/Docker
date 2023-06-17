@@ -1,0 +1,16 @@
+name: Docker CI
+
+on: 
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: python:3.8-alpine
+    steps:
+    - uses: actions/checkout@v2
+    - name: docker build
+      run: |
+        docker build ./my_flask_app - t marmunc/flask_app:v0.1
