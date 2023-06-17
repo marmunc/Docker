@@ -26,7 +26,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: ./my_flask_app
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/flask_app:v0.2
+          tags: ${{ secrets.DOCKER_USERNAME }}/flask_app:v0.3
